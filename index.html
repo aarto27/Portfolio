@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio of Sanchit Singh Narwat - Front-End Web Developer" />
+    <title>Sanchit | Web Developer</title>
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  </head>
+
+  <body class="dark-mode">
+    <!-- Cursor Effects -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scrollProgress"></div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+      <span class="close-modal">&times;</span>
+      <img class="modal-content" id="fullImage" />
+      <div id="caption">Sanchit Singh Narwat</div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header id="header">
+      <div class="brand">
+        <img
+          src="Sanchit's Headshot.jpg"
+          alt="Sanchit"
+          class="avatar"
+          id="profileImg"
+          onerror="this.src='https://ui-avatars.com/api/?name=Sanchit+Singh&background=0D8ABC&color=fff'"
+        />
+        <div class="brand-text">
+          <h1>Sanchit Singh</h1>
+          <p>Web Developer</p>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Work</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <button id="themeToggle" aria-label="Toggle Theme">
+        <i class="fas fa-sun"></i>
+      </button>
+    </header>
+
+    <!-- Floating Nav -->
+    <div id="floatingMenu">
+      <a href="#home"><i class="fas fa-home"></i></a>
+      <a href="#skills"><i class="fas fa-bolt"></i></a>
+      <a href="#projects"><i class="fas fa-code"></i></a>
+      <a href="#contact"><i class="fas fa-paper-plane"></i></a>
+    </div>
+
+    <main>
+      <!-- Background Orbs -->
+      <div class="bg-orb orb-1"></div>
+      <div class="bg-orb orb-2"></div>
+
+      <!-- Hero Section -->
+      <section id="home" class="hero-section" data-aos="fade-in">
+        <div class="hero-content">
+          <div class="badge">Available for Work</div>
+          <h2>
+            <span id="greeting">Hello</span>, I'm
+            <span class="highlight gradient-text">Sanchit</span>
+          </h2>
+          <h3 class="typewriter">
+            I build
+            <span
+              class="txt-type"
+              data-wait="3000"
+              data-words='["Pixel Perfect Webs.", "Interactive UI.", "Scalable Front-Ends."]'
+            ></span>
+          </h3>
+
+          <p class="lead">
+            Turning complex logic into simple, beautiful, and intuitive interface designs.
+          </p>
+
+          <div class="hero-btns">
+            <a href="#projects" class="btn primary-btn">
+              View Work <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn secondary-btn">Contact Me</a>
+          </div>
+        </div>
+
+        <div class="scroll-down">
+          <span>Scroll</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" data-aos="fade-up">
+        <div class="section-header">
+          <h2>About Me</h2>
+          <div class="line"></div>
+        </div>
+
+        <div class="glass-container">
+          <p class="text-center lead">
+            I am a Front-End Developer with a keen eye for design and a passion for performance.
+            I don't just write code; I solve problems. My workflow involves bridging the gap between
+            <strong>engineering</strong> and <strong>design</strong> to create seamless user experiences.
+          </p>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Tech Stack</h2>
+          <div class="line"></div>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-tag" data-aos="zoom-in" data-aos-delay="100"><i class="fab fa-html5"></i> HTML5</div>
+          <div class="skill-tag" data-aos="zoom-in" data-aos-delay="150"><i class="fab fa-css3-alt"></i> CSS3</div>
+          <div class="skill-tag" data-aos="zoom-in" data-aos-delay="200"><i class="fab fa-js"></i> JavaScript</div>
+          <div class="skill-tag" data-aos="zoom-in" data-aos-delay="250"><i class="fab fa-react"></i> React</div>
+          <div class="skill-tag" data-aos="zoom-in" data-aos-delay="300"><i class="fab fa-angular"></i> Angular</div>
+          <div class="skill-tag" data-aos="zoom-in" data-aos-delay="350"><i class="fab fa-node-js"></i> Node.js</div>
+          <div class="skill-tag" data-aos="zoom-in" data-aos-delay="400"><i class="fas fa-database"></i> SQL</div>
+          <div class="skill-tag" data-aos="zoom-in" data-aos-delay="450"><i class="fab fa-figma"></i> Figma</div>
+          <div class="skill-tag" data-aos="zoom-in" data-aos-delay="500"><i class="fab fa-git-alt"></i> Git</div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Experience</h2>
+          <div class="line"></div>
+        </div>
+
+        <div class="card-grid">
+          <div class="card glow-on-hover">
+            <div class="card-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <div class="card-content">
+              <span class="date">2023 - Present</span>
+              <h3>Front-End Developer</h3>
+              <span class="subtitle">Annex Logics</span>
+              <p>
+                Spearheaded the migration to React ecosystem, enhancing component reusability and boosting rendering speeds
+                by <strong>30%</strong>.
+              </p>
+            </div>
+          </div>
+
+          <div class="card glow-on-hover">
+            <div class="card-icon">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <div class="card-content">
+              <span class="date">Season 2022</span>
+              <h3>Operations Intern</h3>
+              <span class="subtitle">IPL (Indian Premier League)</span>
+              <p>
+                Orchestrated fan engagement for 5,000+ attendees and managed critical on-ground operations under high-pressure
+                environments.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Featured Work</h2>
+          <div class="line"></div>
+        </div>
+
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <div class="img-placeholder"><i class="fas fa-hospital-user"></i></div>
+            </div>
+            <div class="project-info">
+              <h3>Medical Landing Page</h3>
+              <p>A high-conversion, accessible landing page for medical appointments.</p>
+              <div class="tags">
+                <span>HTML</span><span>CSS</span><span>UI/UX</span>
+              </div>
+              <a href="https://github.com/aarto27/Medical-Landing-Page.git" target="_blank" class="btn-link">
+                View Source <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <div class="img-placeholder secondary"><i class="fas fa-flask"></i></div>
+            </div>
+            <div class="project-info">
+              <h3>Experimental Lab</h3>
+              <p>A collection of JS games, UI clones, and utility tools.</p>
+              <div class="tags">
+                <span>React</span><span>JavaScript</span><span>API</span>
+              </div>
+              <a href="https://github.com/aarto27" target="_blank" class="btn-link">
+                Visit Profile <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resume Preview -->
+      <section id="cv" data-aos="fade-up">
+        <div class="cv-cta">
+          <h2>Ready to check the details?</h2>
+          <a href="Sanchitcv.pdf" download class="btn primary-btn">
+            <i class="fas fa-download"></i> Download Resume
+          </a>
+        </div>
+
+        <div class="cv-preview-container">
+          <iframe src="Sanchitcv.pdf" class="cv-frame"></iframe>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Let's Connect</h2>
+          <div class="line"></div>
+        </div>
+
+        <div class="contact-wrapper">
+          <form id="contactForm">
+            <h3>Send a Message</h3>
+
+            <div class="form-group">
+              <input type="text" id="name" placeholder=" " required />
+              <label for="name">Your Name</label>
+            </div>
+
+            <div class="form-group">
+              <input type="email" id="email" placeholder=" " required />
+              <label for="email">Your Email</label>
+            </div>
+
+            <div class="form-group">
+              <textarea id="message" placeholder=" " required></textarea>
+              <label for="message">Message</label>
+            </div>
+
+            <button type="submit" class="btn primary-btn full-width">
+              Send Message <i class="fas fa-paper-plane"></i>
+            </button>
+
+            <p id="status"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Sanchit Singh. Crafted with <i class="fas fa-code"></i> & <i class="fas fa-coffee"></i>.</p>
+      <div class="social-links">
+        <a href="https://github.com/aarto27"><i class="fab fa-github"></i></a>
+        <a href="mailto:your-email@example.com"><i class="fas fa-envelope"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
